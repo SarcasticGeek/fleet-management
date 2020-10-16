@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Contracts\BookFacadeInterface;
+use App\Services\BookFacade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            BookFacadeInterface::class,
+            BookFacade::class);
     }
 
     /**
