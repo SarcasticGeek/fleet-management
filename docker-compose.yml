@@ -1,0 +1,7 @@
+web:
+    image: fleet-management
+    ports:
+        - 8001:8000
+    volumes:
+        - ./:/app
+
