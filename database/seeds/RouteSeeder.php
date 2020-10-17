@@ -17,6 +17,7 @@ class RouteSeeder extends Seeder
                 'bus_id' => 1,
                 'station_id' => 1,
                 'level' => 0,
+                'parent_id' => null,
             ],
             [
                 'bus_id' => 1,
