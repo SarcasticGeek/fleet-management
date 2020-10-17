@@ -7,6 +7,11 @@ WORKDIR /app
 COPY . /app
 RUN composer install
 
+CMD cp .env.example .env
+CMD php artisan key:generate
+CMD php artisan migrate
+CMD php artisan db:seed
+
 CMD php artisan serve --host=0.0.0.0 --port=8000
 # EXPOSE 8000
 
