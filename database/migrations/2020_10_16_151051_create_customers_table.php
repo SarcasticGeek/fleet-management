@@ -17,7 +17,7 @@ class CreateCustomersTable extends Migration
             $table->id();
             $table->uuid('uuid');
             $table->integer('status')->default(1);
-            $table->unsignedBigInteger('route_id');
+            $table->unsignedBigInteger('route_id')->nullable();
             $table->foreign('route_id')->references('id')->on('routes');
             $table->timestamps();
         });

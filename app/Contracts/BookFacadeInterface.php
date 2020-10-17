@@ -6,5 +6,5 @@ use App\Bus;
 
 interface BookFacadeInterface
 {
-    public function book(array $criteria): Bus;
+    public function book(array $criteria): ?bool;
 }

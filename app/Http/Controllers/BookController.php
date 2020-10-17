@@ -26,6 +26,8 @@ class BookController extends Controller
             return ['error' => $exception->getMessage()];
         }
 
-        return $this->bookFacade->book($request->all())->toArray();
+        return [
+            'booked' => $this->bookFacade->book($request->all()) ? 'booked' : 'canceled'
+        ];
     }
 }

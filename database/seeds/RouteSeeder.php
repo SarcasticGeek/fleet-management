@@ -22,16 +22,19 @@ class RouteSeeder extends Seeder
                 'bus_id' => 1,
                 'station_id' => 2,
                 'level' => 1,
+                'parent_id' => 1,
             ],
             [
                 'bus_id' => 1,
                 'station_id' => 3,
                 'level' => 2,
+                'parent_id' => 2,
             ],
             [
                 'bus_id' => 1,
                 'station_id' => 4,
                 'level' => 3,
+                'parent_id' => 3
             ],
         ]);
     }
