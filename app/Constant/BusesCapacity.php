@@ -4,5 +4,5 @@ namespace App\Constant;
 
 class BusesCapacity
 {
-    const MINI_BUS = 2;
+    const MINI_BUS = 12;
 }

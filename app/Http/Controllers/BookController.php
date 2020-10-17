@@ -30,4 +30,14 @@ class BookController extends Controller
             'booked' => $this->bookFacade->book($request->all()) ? 'booked' : 'canceled'
         ];
     }
+
+    public function findSeats(Request $request)
+    {
+        return [
+            'availableSeats' => $this->bookFacade->getAvailableSeats(
+                $request->route('startStation'),
+                $request->route('endStation')
+            )
+        ];
+    }
 }

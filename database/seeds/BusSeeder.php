@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Constant\BusesCapacity;
 use Illuminate\Support\Str;
 
 class BusSeeder extends Seeder
@@ -15,7 +14,7 @@ class BusSeeder extends Seeder
     public function run()
     {
         DB::table('buses')->insert([
-            'capacity' => BusesCapacity::MINI_BUS,
+            'capacity' => 0,
             'uuid' => Str::uuid()
         ]);
     }
